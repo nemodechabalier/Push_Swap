@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 11:22:41 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/25 17:48:33 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/06/26 11:31:54 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	je_test(t_pile_all **p_a, t_pile_all **p_b)
 		do_best(best, p_a, p_b);
 	}
 	i = best_for_finish(p_a);
-	if (i < 0)
+	if (i > 0)
 	{
 		while (ft_verrif_struct(*p_a) != TRUE)
 			rotate_a(p_a, TRUE);
