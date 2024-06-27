@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"checker.h": "c",
+		"ft_printf.h": "c",
+		"libft.h": "c"
+	}
+}
