@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 11:40:17 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/27 10:26:09 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/06/27 14:44:28 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,11 @@ t_best_choice			best_choice(t_best_choice best, t_pile_all *p_a,
 int						ft_median(t_pile_all *p_a);
 void					do_best(t_best_choice best, t_pile_all **p_a,
 							t_pile_all **p_b);
+void					do_for_5(t_pile_all **p_a, t_pile_all **p_b);
+void					three_arg(t_pile_all **p_a);
+int						best_for_finish(t_pile_all **p_a);
+int						pos_nb(t_pile_all *p_all, int nb);
+int						for_3(t_pile_all *p_a);
 
 # ifndef TRUE
 #  define TRUE 1

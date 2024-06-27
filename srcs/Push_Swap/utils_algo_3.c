@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:46:57 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/25 17:58:40 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/06/27 14:47:39 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,22 @@ int	ft_cost(t_pile_all *p_all, int nb)
 		return (ft_cost2(p_all, nb, size));
 	if (i > size / 2)
 		return (i - size);
+	return (i);
+}
+
+int	pos_nb(t_pile_all *p_all, int nb)
+{
+	int	i;
+	int	size;
+
+	i = 0;
+	size = pile_size(p_all);
+	while (p_all && p_all->nb != nb)
+	{
+		i++;
+		p_all = p_all->next;
+	}
+	if (i > size / 2)
+		i = i - size;
 	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 11:22:41 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/26 11:31:54 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/06/27 14:45:35 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	two_arg(t_pile_all **p_a)
 
 void	three_arg(t_pile_all **p_a)
 {
+	if (for_3(*p_a) == TRUE)
+		swap_a(*p_a, TRUE);
 	while (ft_verrif_struct(*p_a) != TRUE)
 	{
 		if (ft_rev_verrif_struct(*p_a) == TRUE)
@@ -42,6 +44,8 @@ void	first(t_pile_all **p_a, t_pile_all **p_b)
 		return (two_arg(p_a));
 	if (size == 3)
 		return (three_arg(p_a));
+	if (size <= 5)
+		do_for_5(p_a, p_b);
 	else
 		je_test(p_a, p_b);
 }
@@ -75,7 +79,7 @@ void	je_test(t_pile_all **p_a, t_pile_all **p_b)
 	while (pile_size(*p_a) != 3)
 	{
 		push_b(p_a, p_b);
-		if ((*p_b)->nb <= median)
+		if ((*p_b)->nb <= median && pile_size(*p_a) > 5)
 			rotate_b(p_b, TRUE);
 	}
 	three_arg(p_a);
