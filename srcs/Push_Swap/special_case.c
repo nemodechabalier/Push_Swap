@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 14:34:03 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/28 15:28:23 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/06/28 16:56:32 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	push_2_min_in_b(t_pile_all **p_a, t_pile_all **p_b)
 			reverse_a(p_a, TRUE);
 			i++;
 		}
-		push_b(p_a, p_b);
+		push_b(p_a, p_b, TRUE);
 	}
 }
 

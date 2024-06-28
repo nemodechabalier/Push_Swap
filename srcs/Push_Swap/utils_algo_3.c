@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:46:57 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/28 15:29:33 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/06/28 16:56:26 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,20 @@ void	do_best2(t_best_choice best, t_pile_all **p_a, t_pile_all **p_b)
 		reverse_b(p_b, TRUE);
 		best.position++;
 	}
-	push_a(p_a, p_b);
+	push_a(p_a, p_b, TRUE);
 }
 
 void	do_best(t_best_choice best, t_pile_all **p_a, t_pile_all **p_b)
 {
 	while (best.mouv > 0 && best.position > 0)
 	{
-		rotate_all(p_b, p_a);
+		rotate_all(p_b, p_a, TRUE);
 		best.mouv--;
 		best.position--;
 	}
 	while (best.mouv < 0 && best.position < 0)
 	{
-		reverse_all(p_a, p_b);
+		reverse_all(p_a, p_b, TRUE);
 		best.mouv++;
 		best.position++;
 	}

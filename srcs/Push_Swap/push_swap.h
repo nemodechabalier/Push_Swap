@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 11:40:17 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/28 15:31:26 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/06/28 16:54:59 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,17 +49,17 @@ void					pile_add_front(t_pile_all **p_all, t_pile_all *new);
 void					pile_clear(t_pile_all **p_all);
 
 // instruction
-void					swap_a(t_pile_all *p_a, int s);
-void					swap_b(t_pile_all *p_b, int s);
-void					swap_all(t_pile_all *p_a, t_pile_all *p_b);
-void					push_a(t_pile_all **p_a, t_pile_all **p_b);
-void					push_b(t_pile_all **p_a, t_pile_all **p_b);
-void					rotate_a(t_pile_all **p_a, int s);
-void					rotate_b(t_pile_all **p_b, int s);
-void					rotate_all(t_pile_all **p_b, t_pile_all **p_a);
-void					reverse_a(t_pile_all **p_a, int s);
-void					reverse_b(t_pile_all **p_b, int s);
-void					reverse_all(t_pile_all **p_a, t_pile_all **p_b);
+void					swap_a(t_pile_all *p_a, int bool);
+void					swap_b(t_pile_all *p_b, int bool);
+void					swap_all(t_pile_all *p_a, t_pile_all *p_b, int bool);
+void					push_a(t_pile_all **p_a, t_pile_all **p_b, int bool);
+void					push_b(t_pile_all **p_a, t_pile_all **p_b, int bool);
+void					rotate_a(t_pile_all **p_a, int bool);
+void					rotate_b(t_pile_all **p_b, int bool);
+void					rotate_all(t_pile_all **p_b, t_pile_all **p_a, int bool);
+void					reverse_a(t_pile_all **p_a, int bool);
+void					reverse_b(t_pile_all **p_b, int bool);
+void					reverse_all(t_pile_all **p_a, t_pile_all **p_b, int bool);
 
 // utils & algo
 int						ft_verrif_struct(t_pile_all *p);

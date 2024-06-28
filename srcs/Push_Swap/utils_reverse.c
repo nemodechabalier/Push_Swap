@@ -6,13 +6,13 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 15:30:03 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/27 13:30:46 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/06/28 16:56:45 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	reverse_a(t_pile_all **p_a, int s)
+void	reverse_a(t_pile_all **p_a, int bool)
 {
 	t_pile_all	*temp;
 	int			size;
@@ -34,11 +34,11 @@ void	reverse_a(t_pile_all **p_a, int s)
 		i++;
 	}
 	temp->next = NULL;
-	if (s == TRUE)
+	if (bool == TRUE)
 		ft_printf("rra\n");
 }
 
-void	reverse_b(t_pile_all **p_b, int s)
+void	reverse_b(t_pile_all **p_b, int bool)
 {
 	t_pile_all	*temp;
 	int			size;
@@ -60,13 +60,14 @@ void	reverse_b(t_pile_all **p_b, int s)
 		i++;
 	}
 	temp->next = NULL;
-	if (s == TRUE)
+	if (bool == TRUE)
 		ft_printf("rrb\n");
 }
 
-void	reverse_all(t_pile_all **p_a, t_pile_all **p_b)
+void	reverse_all(t_pile_all **p_a, t_pile_all **p_b, int bool)
 {
-	ft_printf("rrr\n");
+	if (bool == TRUE)
+		ft_printf("rrr\n");
 	reverse_a(p_a, FALSE);
 	reverse_b(p_b, FALSE);
 }
