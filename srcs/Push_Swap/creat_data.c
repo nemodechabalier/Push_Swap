@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 11:42:21 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/19 17:39:24 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/06/28 15:08:35 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,22 +64,22 @@ t_pile_all	*ft_creat_p_a(int ac, char **av)
 	{
 		strs = ft_split(av[0], ' ');
 		if (!strs)
-			return (ft_printf("Error\n"), NULL);
+			return (write(2, "Error\n", 6), NULL);
 		if (ft_verrif_str(strs) == FALSE)
-			return (ft_free(strs), ft_printf("Error\n"), NULL);
+			return (ft_free(strs), write(2, "Error\n", 6), NULL);
 		p_a = ft_define_struct(strs);
 		if (!p_a)
-			return (ft_printf("Error\n"), pile_clear(&p_a), ft_free(strs),
+			return (write(2, "Error\n", 6), pile_clear(&p_a), ft_free(strs),
 				NULL);
 		ft_free(strs);
 	}
 	else
 	{
 		if (ft_verrif_str(av) == FALSE)
-			return (ft_printf("Error\n"), NULL);
+			return (write(2, "Error\n", 6), NULL);
 		p_a = ft_define_struct(av);
 		if (!p_a)
-			return (pile_clear(&p_a), ft_printf("Error\n"), NULL);
+			return (pile_clear(&p_a), write(2, "Error\n", 6), NULL);
 	}
 	return (p_a);
 }

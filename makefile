@@ -6,7 +6,7 @@
 #    By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/27 10:27:44 by nde-chab          #+#    #+#              #
-#    Updated: 2024/06/27 14:39:42 by nde-chab         ###   ########.fr        #
+#    Updated: 2024/06/28 15:36:29 by nde-chab         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,8 @@ INCLUDES = -I .
 SRCS_DIR = srcs/Push_Swap/
 SRCS_BONUS_DIR = srcs/bonus_checker/
 
-FUNC = algo.c error_gestion.c struct_utils_2.c utils_algo2.c utils_algo.c utils_reverse.c utils_swap.c \
-       creat_data.c struct_utils.c utils_algo_3.c utils_push.c utils_rotate.c special_case.c
+FUNC = algo.c error_gestion.c struct_utils_2.c utils_algo_1.c utils_algo_3.c utils_push.c utils_rotate.c \
+		creat_data.c special_case.c  struct_utils.c    utils_algo_2.c  utils_algo_4.c  utils_reverse.c  utils_swap.c
 
 FUNC_BONUS = read_and_do.c utils_push_c.c utils_reverse_c.c utils_rotate_c.c utils_swap_c.c
 
@@ -67,7 +67,7 @@ fclean: clean
 	
 
 # Recompile everything
-re: fclean all bonus
+re: fclean all
 
 # Default target
 all: $(NAME)

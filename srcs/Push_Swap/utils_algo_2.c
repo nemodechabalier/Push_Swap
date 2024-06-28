@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_algo2.c                                      :+:      :+:    :+:   */
+/*   utils_algo_2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 14:04:38 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/25 17:59:18 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/06/28 15:18:57 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ t_best_choice	best_choice(t_best_choice best, t_pile_all *p_a,
 	return (best);
 }
 
-int	*sort_tab(int *tab, int size)
+static int	*sort_tab(int *tab, int size)
 {
 	int	i;
 	int	temp;
