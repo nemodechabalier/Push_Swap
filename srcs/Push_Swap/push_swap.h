@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 11:40:17 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/28 16:54:59 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/07/03 15:30:26 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,17 +56,19 @@ void					push_a(t_pile_all **p_a, t_pile_all **p_b, int bool);
 void					push_b(t_pile_all **p_a, t_pile_all **p_b, int bool);
 void					rotate_a(t_pile_all **p_a, int bool);
 void					rotate_b(t_pile_all **p_b, int bool);
-void					rotate_all(t_pile_all **p_b, t_pile_all **p_a, int bool);
+void					rotate_all(t_pile_all **p_b, t_pile_all **p_a,
+							int bool);
 void					reverse_a(t_pile_all **p_a, int bool);
 void					reverse_b(t_pile_all **p_b, int bool);
-void					reverse_all(t_pile_all **p_a, t_pile_all **p_b, int bool);
+void					reverse_all(t_pile_all **p_a, t_pile_all **p_b,
+							int bool);
 
 // utils & algo
 int						ft_verrif_struct(t_pile_all *p);
 int						ft_rev_verrif_struct(t_pile_all *p);
 int						ft_max_nb(t_pile_all *p);
 int						ft_min_nb(t_pile_all *p);
-void					first(t_pile_all **p_a, t_pile_all **p_b);
+void					algo(t_pile_all **p_a, t_pile_all **p_b);
 int						ft_prev_nb(t_pile_all *p_all);
 int						ft_cost(t_pile_all *p_all, int nb);
 t_best_choice			best_choice(t_best_choice best, t_pile_all *p_a,

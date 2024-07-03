@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 11:40:14 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/28 15:48:36 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/07/03 15:30:35 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ int	main(int ac, char **av)
 
 	p_b = NULL;
 	if (ac == 1)
-		return (write(2,"need mor args\n",14), -1);
+		return (write(2, "need mor args\n", 14), -1);
 	else
 		p_a = ft_creat_p_a(ac, av + 1);
 	if (!p_a)
 		return (-1);
-	first(&p_a, &p_b);
+	algo(&p_a, &p_b);
 	pile_clear(&p_a);
 	return (0);
 }

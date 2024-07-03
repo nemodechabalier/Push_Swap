@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 11:22:41 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/28 15:44:17 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/07/03 15:36:41 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	three_arg(t_pile_all **p_a)
 	}
 }
 
-void	first(t_pile_all **p_a, t_pile_all **p_b)
+void	algo(t_pile_all **p_a, t_pile_all **p_b)
 {
 	int	size;
 
@@ -59,19 +59,21 @@ void	first(t_pile_all **p_a, t_pile_all **p_b)
 
 int	pos_min(t_pile_all **p_a)
 {
-	int i;
-	int size;
-	t_pile_all *temp;
+	int			i;
+	int			min;
+	int			size;
+	t_pile_all	*temp;
 
 	temp = *p_a;
+	min = ft_min_nb(temp);
 	i = 0;
 	size = pile_size(*p_a);
-	while (temp->nb != ft_min_nb(temp))
+	while (temp->nb != min)
 	{
 		temp = temp->next;
 		i++;
 	}
 	if (i > size / 2)
-		i = size - i;
+		i = i - size;
 	return (i);
 }
