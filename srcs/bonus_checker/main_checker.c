@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 11:51:30 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/06/28 16:51:58 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/07/11 14:14:17 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	main(int ac, char **av)
 		i = ft_read_and_instrustion(&p_a, &p_b);
 	if (i == -1)
 		return (pile_clear(&p_a), pile_clear(&p_b), -1);
+	if (!p_a)
+		return(ft_printf("KO\n"));
 	else if (ft_verrif_struct(p_a) == TRUE && !p_b)
 		ft_printf("OK\n");
 	else
